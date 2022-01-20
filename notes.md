@@ -53,3 +53,8 @@ También tenemos:
     * Short Int
     * Unsign Int
     * Long Double
+
+## Librerias
+
+    * iostream
+    * string 
