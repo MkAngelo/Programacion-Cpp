@@ -4,12 +4,14 @@
 using namespace std;
 
 class Persona {
-    public:
+    private:
         string nombre;
         int edad;
+    public:
         Persona(string n) {
             nombre = n;
         }
+        // Persona(string n, int e) : nombre(n), edad(e) {}
         ~Persona(){
             cout << "Destructor" << endl;
         }        
@@ -21,7 +23,7 @@ class Persona {
 int main() {
     Persona *p = new Persona("Miguel");
     Persona *p2 = new Persona("Diana");
-    delete p2; // Forma manual
+    //delete p2; // Forma manual
     //p2->nombre = "Diana";
     //cout << p->nombre << endl;
     p->saludar();
