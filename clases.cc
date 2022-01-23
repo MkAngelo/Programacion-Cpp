@@ -16,11 +16,10 @@ class Persona {
         ~Persona(){
             cout << "Destructor" << endl;
         }        
-        void establecerNombre(string nombre) {
-            this->nombre = nombre;
-        }
-        void establecerEdad(int edad) {
+        Persona &establecerNombre(string nombre) { this->nombre = nombre; return *this; }
+        Persona &establecerEdad(int edad) {
             this->edad = edad;
+            return *this;
         }
         void saludar() {
             cout << "Hi my name is " << nombre << ", I'm  " << edad << " years old." << endl;
@@ -29,14 +28,8 @@ class Persona {
 
 int main() {
     Persona *p = new Persona("Miguel", 20);
-    //Persona *p2 = new Persona("Diana", 19);
 
-    p->establecerNombre("Angel"); 
-    p->establecerEdad(21);
-
-    //delete p2; // Forma manual
-    //p2->nombre = "Diana";
-    //cout << p->nombre << endl;
+    p->establecerNombre("Angel").establecerEdad(21); 
+    
     p->saludar();
-    //p2->saludar();
 }
