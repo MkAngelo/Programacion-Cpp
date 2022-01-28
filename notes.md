@@ -58,3 +58,7 @@ También tenemos:
 
     * iostream
     * string 
+
+## .cc o .cpp
+
+    En realidad depende mucho del programador, por lo general se usa .cpp cotidianamente, aunque algunos prefieren .cc No existe diferencia puesto que GCC puede compilar ambos archivos
